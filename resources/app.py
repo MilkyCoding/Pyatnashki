@@ -116,6 +116,9 @@ class App(ctk.CTk):
 
                 player_subsequence.append(column.digit)
 
+        if correct_subsequence == player_subsequence:
+            return True
+
         return False
 
     def _is_puzzle_move_available(self, row: int, column: int) -> Union[bool, tuple]:
